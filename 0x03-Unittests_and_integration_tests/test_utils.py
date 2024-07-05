@@ -33,6 +33,7 @@ class TestAccessNestedMap(unittest.TestCase):
     ])
     def test_access_nested_map_exception(self, nested_map,
                                          path, expected_message, expected_key):
+        """function"""
         with self.assertRaises(expected_message):
             access_nested_map(nested_map, path)
 
@@ -63,10 +64,12 @@ class TestMemoize(unittest.TestCase):
         # Define a test class with a method and a memoized property
         class TestClass:
             def a_method(self):
+                """function"""
                 return 42
 
             @memoize
             def a_property(self):
+                """function"""
                 return self.a_method()
 
         # Patch the a_method of TestClass
